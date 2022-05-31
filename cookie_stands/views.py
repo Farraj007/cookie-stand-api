@@ -5,6 +5,7 @@ from rest_framework.generics import (
 from .models import CookieStand
 from .permissions import IsOwnerOrReadOnly
 from .serializers import CookieSerializer
+from django.views.decorators.csrf import csrf_protect
 
 @csrf_protect
 class CookieStandList(ListCreateAPIView):
