@@ -30,6 +30,7 @@ env = environ.Env(
     DATABASE_PORT=(int, 5432),
 )
 
+
 environ.Env.read_env()
 
 ENVIRONMENT = env.str("ENVIRONMENT")
@@ -60,7 +61,7 @@ INSTALLED_APPS = [
     "corsheaders",
     # local
     "accounts",
-    "things",
+    "cookie_stands",
 ]
 
 MIDDLEWARE = [
@@ -166,5 +167,10 @@ REST_FRAMEWORK = {
     ],
 }
 
+# CORS_ORIGIN_WHITELIST = tuple(env.list("ALLOWED_ORIGINS"))
+# CORS_ALLOW_ALL_ORIGINS = env.bool("ALLOW_ALL_ORIGINS")
+# CSRF_TRUSTED_ORIGINS = tuple(env.list("ALLOWED_ORIGINS"))
+
 CORS_ORIGIN_WHITELIST = tuple(env.list("ALLOWED_ORIGINS"))
 CORS_ALLOW_ALL_ORIGINS = env.bool("ALLOW_ALL_ORIGINS")
+CSRF_COOKIE_SECURE=True
