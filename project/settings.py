@@ -21,6 +21,7 @@ env = environ.Env(
     ENVIRONMENT=(str, "PRODUCTION"),
     ALLOW_ALL_ORIGINS=(bool, False),
     ALLOWED_HOSTS=(list, []),
+    CSRF_TRUSTED_ORIGINS=(list, []),
     ALLOWED_ORIGINS=(list, []),
     DATABASE_ENGINE=(str, "django.db.backends.sqlite3"),
     DATABASE_NAME=(str, BASE_DIR / "db.sqlite3"),
@@ -94,15 +95,8 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'project.wsgi.application'
-# CSRF_COOKIE_DOMAIN = None
-# CSRF_COOKIE_NAME='csrftoken'
 CSRF_TRUSTED_ORIGINS=['https://cookie-stand-barham-farraj.herokuapp.com']
-# CSRF_COOKIE_MASKED = True
-# TRUSTED_ORIGINS =['https://cookie-stand-barham-farraj.herokuapp.com/']
-# CSRF_FAILURE_VIEW='django.views.csrf.csrf_failure'
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
 
 DATABASES = {
     "default": {
@@ -171,10 +165,6 @@ REST_FRAMEWORK = {
     ],
 }
 
-# CORS_ORIGIN_WHITELIST = tuple(env.list("ALLOWED_ORIGINS"))
-# CORS_ALLOW_ALL_ORIGINS = env.bool("ALLOW_ALL_ORIGINS")
-# CSRF_TRUSTED_ORIGINS = tuple(env.list("ALLOWED_ORIGINS"))
 
 CORS_ORIGIN_WHITELIST = tuple(env.list("ALLOWED_ORIGINS"))
 CORS_ALLOW_ALL_ORIGINS = env.bool("ALLOW_ALL_ORIGINS")
-CSRF_COOKIE_SECURE=True
