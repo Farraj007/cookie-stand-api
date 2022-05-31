@@ -97,6 +97,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'project.wsgi.application'
 CSRF_COOKIE_DOMAIN = None
 CSRF_COOKIE_NAME='csrftoken'
+CSRF_TRUSTED_ORIGINS=['https://cookie-stand-barham-farraj.herokuapp.com/']
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
