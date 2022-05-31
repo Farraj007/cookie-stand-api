@@ -1,7 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 
-
 class CookieStand(models.Model):
     location = models.CharField(max_length=256)
     owner = models.ForeignKey(
