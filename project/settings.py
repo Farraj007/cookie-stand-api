@@ -94,13 +94,13 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'project.wsgi.application'
-CSRF_COOKIE_DOMAIN = None
-CSRF_COOKIE_NAME='csrftoken'
-CSRF_TRUSTED_ORIGINS=['https://cookie-stand-barham-farraj.herokuapp.com/']
-CSRF_COOKIE_MASKED = False
-TRUSTED_ORIGINS =['https://cookie-stand-barham-farraj.herokuapp.com/']
-CSRF_FAILURE_VIEW='django.views.csrf.csrf_failure'
+# WSGI_APPLICATION = 'project.wsgi.application'
+# CSRF_COOKIE_DOMAIN = None
+# CSRF_COOKIE_NAME='csrftoken'
+CSRF_TRUSTED_ORIGINS=['https://cookie-stand-barham-farraj.herokuapp.com']
+# CSRF_COOKIE_MASKED = True
+# TRUSTED_ORIGINS =['https://cookie-stand-barham-farraj.herokuapp.com/']
+# CSRF_FAILURE_VIEW='django.views.csrf.csrf_failure'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
